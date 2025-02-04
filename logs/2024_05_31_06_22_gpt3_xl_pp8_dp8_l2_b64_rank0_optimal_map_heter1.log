@@ -1,0 +1,16 @@
+/workspace/ACO_PTAFM
+2------------------
+/workspace/ACO_PTAFM
+    [35;40;7m[Python: Rank-id:0 cuda-id:0][0m init_communicators start
+48 == 2 * 6
+T4 Node0. MappingID:36
+                                                                 rankid:0,mapping id:36,group :[36, 37, 38, 27, 54, 55, 56, 12, 42, 43, 44, 48, 49, 50],group size:14
+_PIPELINE_PARALLEL_RANK: 0
+Initialize NCCLCommunicator: < pipeline_group_2 >; rank: 0
+Gather_id:0,mapping id:36,group :[36, 37, 38, 27],Gather group size:4
+Initialize NCCLCommunicator: < pipeline_gather_group_2 >; rank: 0
+Data Parallel id:6,mapping id:36,group :[66, 67, 68, 69, 70, 71, 36, 37, 38, 39, 40, 41],DATA group size:12
+Initialize NCCLCommunicator: < data_group_0 >; rank: 6
+    [35;40;7m[Python: Rank-id:0 cuda-id:0][0m init_communicators finished
+> building BertWordPieceLowerCase tokenizer ...
+ > padded vocab (size: 28998) with 58 dummy tokens (new size: 29056)

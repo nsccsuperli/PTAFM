@@ -1,0 +1,48 @@
+/workspace/ACO_PTAFM
+2------------------
+/workspace/ACO_PTAFM
+    [35;40;7m[Python: Rank-id:0 cuda-id:0][0m init_communicators start
+48 == 2 * 6
+T4 Node0. MappingID:36
+                                                                 rankid:0,mapping id:36,group :[36, 37, 38, 27, 54, 55, 56, 12, 42, 43, 44, 48, 49, 50],group size:14
+_PIPELINE_PARALLEL_RANK: 0
+Initialize NCCLCommunicator: < pipeline_group_2 >; rank: 0
+Gather_id:0,mapping id:36,group :[36, 37, 38, 27],Gather group size:4
+Initialize NCCLCommunicator: < pipeline_gather_group_2 >; rank: 0
+Data Parallel id:6,mapping id:36,group :[66, 67, 68, 69, 70, 71, 36, 37, 38, 39, 40, 41],DATA group size:12
+Initialize NCCLCommunicator: < data_group_0 >; rank: 6
+    [35;40;7m[Python: Rank-id:0 cuda-id:0][0m init_communicators finished
+> building BertWordPieceLowerCase tokenizer ...
+ > padded vocab (size: 28998) with 58 dummy tokens (new size: 29056)
+Gather token vocab size: 28998
+ > building QQP dataset for training:
+  > paths: ./task_datasets/data/QQP/train.tsv
+ > Processing ./task_datasets/data/QQP/train.tsv ...
+    reading uid, text1, text2, and label columns ...
+  > processed 50000 so far ...
+  > processed 100000 so far ...
+  > processed 150000 so far ...
+  > processed 200000 so far ...
+  > processed 250000 so far ...
+  > processed 300000 so far ...
+  > processed 350000 so far ...
+ >> processed 363846 samples.
+  >> total number of samples: 363846
+<torch.utils.data.dataloader.DataLoader object at 0x7f25d6939fd0>
+Running  gpipe  with data parallel.(args.profiling=tidy_profiling)
+args, vocab_size:28998, num_classes:2, device:cuda:0, use_dp:True
+=======Initialize Gpipe.
+=======Gpipe use FP16
+global_rank: 0, pipeline_group_size: 14, pp_rank: 0, pre_node_rank: -1, post_node_rank: 1, comm_size: 14, comm: <comm.nccl_backend.NCCLCommunicator object at 0x7f25c5642310>, gather_comm: <comm.nccl_backend.NCCLCommunicator object at 0x7f25c5642250>, scatter_comm: None, device_gpu: 0
+=======Gradient accumulate step:  2
+=======Current micro-batch send/recv size: 8 MB (fp16)
+=======Number of micro-batches: 4.
+self.globalID: 0.  completed First model load
+fp16 uses ConstantGradScaler.
+Data parallel implementation:  central_ps
+Total number of parameters: 164298752, element size: 2, total size 313 MB.
+Flattened parameter number: 164298752, element size: 2.
+Flattened parameter grad number: 164298752, element size: 2.
+tidy_profiling
+-----------size!=6:----------global ID:0
+        [34;40;7m[Python: Rank-id:0 cuda-id:0][0m Pipeline_rank() == 0

@@ -1,0 +1,112 @@
+    [35;40;7m[Python: Rank-id:0 cuda-id:0][0m init_communicators start
+48 == 2 * 6
+T4 Node0. MappingID:36
+                                                                 rankid:0,mapping id:36,group :[36, 39, 41, 18, 56, 54, 59, 49, 42, 45, 3, 52, 46, 44],group size:14
+_PIPELINE_PARALLEL_RANK: 0
+Initialize NCCLCommunicator: < pipeline_group_3 >; rank: 0
+Gather_id:0,mapping id:36,group :[36, 39, 41, 18],Gather group size:4
+Initialize NCCLCommunicator: < pipeline_gather_group_7 >; rank: 0
+Data Parallel id:9,mapping id:36,group :[66, 71, 69, 70, 67, 68, 38, 40, 37, 36, 39, 41],DATA group size:12
+Initialize NCCLCommunicator: < data_group_5 >; rank: 9
+    [35;40;7m[Python: Rank-id:0 cuda-id:0][0m init_communicators finished
+> building BertWordPieceLowerCase tokenizer ...
+ > padded vocab (size: 28998) with 58 dummy tokens (new size: 29056)
+Gather token vocab size: 28998
+ > building QQP dataset for training:
+  > paths: ./task_datasets/data/QQP/train.tsv
+ > Processing ./task_datasets/data/QQP/train.tsv ...
+    reading uid, text1, text2, and label columns ...
+  > processed 50000 so far ...
+  > processed 100000 so far ...
+  > processed 150000 so far ...
+  > processed 200000 so far ...
+  > processed 250000 so far ...
+  > processed 300000 so far ...
+  > processed 350000 so far ...
+ >> processed 363846 samples.
+  >> total number of samples: 363846
+<torch.utils.data.dataloader.DataLoader object at 0x7f7204dc1fd0>
+Running  gpipe  with data parallel.(args.profiling=tidy_profiling)
+args, vocab_size:28998, num_classes:2, device:cuda:0, use_dp:True
+=======Initialize Gpipe.
+=======Gpipe use FP16
+global_rank: 0, pipeline_group_size: 14, pp_rank: 0, pre_node_rank: -1, post_node_rank: 1, comm_size: 14, comm: <comm.nccl_backend.NCCLCommunicator object at 0x7f71f3aca250>, gather_comm: <comm.nccl_backend.NCCLCommunicator object at 0x7f71f3aca220>, scatter_comm: None, device_gpu: 0
+=======Gradient accumulate step:  2
+=======Current micro-batch send/recv size: 8 MB (fp16)
+=======Number of micro-batches: 24.
+self.globalID: 0.  completed First model load
+fp16 uses ConstantGradScaler.
+Data parallel implementation:  central_ps
+Total number of parameters: 466448384, element size: 2, total size 889 MB.
+Flattened parameter number: 466448384, element size: 2.
+Flattened parameter grad number: 466448384, element size: 2.
+tidy_profiling
+-----------T4:----------global ID:0
+        [34;40;7m[Python: Rank-id:0 cuda-id:0][0m Pipeline_rank() == 0
+Rank 0 node forward pass 0/2 takes 5.89s
+Rank 0 node backward pass 0/2 takes 38.75s
+Rank 0 node forward pass 1/2 takes 12.55s
+Rank 0 node backward pass 1/2 takes 36.20s
+cent-param-tb: 0.0017218589782714844
+cpu cpu cuda:0
+dp_optim_spend_time: 3.0054354667663574
+                                                    Rank 0 node optimizer step takes 27.98s
+                                                    Rank 0 node torch_synchronize_time step takes 0.00s
+                                                    Rank 0 node barrier_time step takes 41.71s
+                                                    Rank 0 node optimizer step ALL(1+2+3) takes 69.70s
+                                                    Rank 0 node whole iteration takes 163.09s
+-------------------------------------------
+Rank 0 node forward pass 0/2 takes 18.40s
+Rank 0 node backward pass 0/2 takes 26.29s
+Rank 0 node forward pass 1/2 takes 6.32s
+Rank 0 node backward pass 1/2 takes 48.90s
+cent-param-tb: 0.0001957416534423828
+cpu cpu cuda:0
+dp_optim_spend_time: 2.993854522705078
+                                                    Rank 0 node optimizer step takes 29.58s
+                                                    Rank 0 node torch_synchronize_time step takes 0.00s
+                                                    Rank 0 node barrier_time step takes 34.95s
+                                                    Rank 0 node optimizer step ALL(1+2+3) takes 64.53s
+                                                    Rank 0 node whole iteration takes 164.45s
+-------------------------------------------
+Rank 0 node forward pass 0/2 takes 8.12s
+Rank 0 node backward pass 0/2 takes 39.86s
+Rank 0 node forward pass 1/2 takes 8.23s
+Rank 0 node backward pass 1/2 takes 51.18s
+cent-param-tb: 0.00023603439331054688
+cpu cpu cuda:0
+dp_optim_spend_time: 4.278634548187256
+                                                    Rank 0 node optimizer step takes 35.07s
+                                                    Rank 0 node torch_synchronize_time step takes 0.00s
+                                                    Rank 0 node barrier_time step takes 35.02s
+                                                    Rank 0 node optimizer step ALL(1+2+3) takes 70.09s
+                                                    Rank 0 node whole iteration takes 177.49s
+-------------------------------------------
+Rank 0 node forward pass 0/2 takes 14.84s
+Rank 0 node backward pass 0/2 takes 28.62s
+Rank 0 node forward pass 1/2 takes 10.01s
+Rank 0 node backward pass 1/2 takes 42.51s
+cent-param-tb: 0.0001804828643798828
+cpu cpu cuda:0
+dp_optim_spend_time: 2.889237880706787
+                                                    Rank 0 node optimizer step takes 34.57s
+                                                    Rank 0 node torch_synchronize_time step takes 0.00s
+                                                    Rank 0 node barrier_time step takes 35.09s
+                                                    Rank 0 node optimizer step ALL(1+2+3) takes 69.66s
+                                                    Rank 0 node whole iteration takes 165.64s
+-------------------------------------------
+Rank 0 node forward pass 0/2 takes 7.33s
+Rank 0 node backward pass 0/2 takes 39.97s
+Rank 0 node forward pass 1/2 takes 5.69s
+Rank 0 node backward pass 1/2 takes 39.31s
+cent-param-tb: 0.00018024444580078125
+cpu cpu cuda:0
+dp_optim_spend_time: 2.8567638397216797
+                                                    Rank 0 node optimizer step takes 35.04s
+                                                    Rank 0 node torch_synchronize_time step takes 0.00s
+                                                    Rank 0 node barrier_time step takes 34.89s
+                                                    Rank 0 node optimizer step ALL(1+2+3) takes 69.94s
+                                                    Rank 0 node whole iteration takes 162.24s
+-------------------------------------------
+Finished running  5  iterations, averaged (exclude the first iter) run time: 167.45198875665665
+----------------------------------------------------------------------------------------time_spend： 844.0460278987885 secend

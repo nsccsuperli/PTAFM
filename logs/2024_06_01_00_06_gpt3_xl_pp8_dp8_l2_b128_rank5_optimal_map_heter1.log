@@ -1,0 +1,96 @@
+    [35;40;7m[Python: Rank-id:5 cuda-id:1][0m init_communicators start
+48 == 2 * 6
+A100 Node5. MappingID:15
+                                                                 rankid:5,mapping id:15,group :[70, 67, 68, 24, 30, 15, 64, 61, 60, 12],group size:10
+_PIPELINE_PARALLEL_RANK: 5
+Initialize NCCLCommunicator: < pipeline_group_1 >; rank: 5
+Scatther_id:5,mapping id:15,group :[15, 64, 61, 60],Scatter group size:4
+Initialize NCCLCommunicator: < pipeline_scatter_group_1 >; rank: 0
+Data Parallel id:2,mapping id:15,group :[6, 53, 15, 48, 47, 49, 42, 45],DATA group size:8
+Initialize NCCLCommunicator: < data_group_2 >; rank: 2
+    [35;40;7m[Python: Rank-id:5 cuda-id:1][0m init_communicators finished
+Running  gpipe  with data parallel.(args.profiling=tidy_profiling)
+args, vocab_size:-1, num_classes:2, device:cuda:1, use_dp:True
+=======Initialize Gpipe.
+=======Gpipe use FP16
+global_rank: 5, pipeline_group_size: 10, pp_rank: 5, pre_node_rank: 4, post_node_rank: 6, comm_size: 10, comm: <comm.nccl_backend.NCCLCommunicator object at 0x7f243dfac2b0>, gather_comm: None, scatter_comm: <comm.nccl_backend.NCCLCommunicator object at 0x7f243dfac220>, device_gpu: 1
+=======Gradient accumulate step:  2
+=======Current micro-batch send/recv size: 8 MB (fp16)
+=======Number of micro-batches: 8.
+self.globalID: 5.  completed Middle model load
+fp16 uses ConstantGradScaler.
+Data parallel implementation:  central_ps
+Total number of parameters: 100716544, element size: 2, total size 192 MB.
+Flattened parameter number: 100716544, element size: 2.
+Flattened parameter grad number: 100716544, element size: 2.
+tidy_profiling
+Rank 5 node forward pass 0/2 takes 9.91s
+Rank 5 node backward pass 0/2 takes 18.37s
+Rank 5 node forward pass 1/2 takes 5.02s
+Rank 5 node backward pass 1/2 takes 16.15s
+cent-param-tb: 0.0007789134979248047
+cpu cpu cuda:1
+dp_optim_spend_time: 0.7384157180786133
+                                                    Rank 5 node optimizer step takes 5.82s
+                                                    Rank 5 node torch_synchronize_time step takes 0.00s
+                                                    Rank 5 node barrier_time step takes 14.06s
+                                                    Rank 5 node optimizer step ALL(1+2+3) takes 19.87s
+                                                    Rank 5 node whole iteration takes 69.32s
+-------------------------------------------
+Rank 5 node forward pass 0/2 takes 4.68s
+Rank 5 node backward pass 0/2 takes 20.51s
+Rank 5 node forward pass 1/2 takes 7.88s
+Rank 5 node backward pass 1/2 takes 11.15s
+cent-param-tb: 0.003551483154296875
+cpu cpu cuda:1
+!!! Warning: find inf in fp16 optimizer-step() !!!
+dp_optim_spend_time: 0.5849030017852783
+                                                    Rank 5 node optimizer step takes 7.80s
+                                                    Rank 5 node torch_synchronize_time step takes 0.00s
+                                                    Rank 5 node barrier_time step takes 7.33s
+                                                    Rank 5 node optimizer step ALL(1+2+3) takes 15.13s
+                                                    Rank 5 node whole iteration takes 59.35s
+-------------------------------------------
+Rank 5 node forward pass 0/2 takes 6.58s
+Rank 5 node backward pass 0/2 takes 9.95s
+Rank 5 node forward pass 1/2 takes 6.04s
+Rank 5 node backward pass 1/2 takes 9.31s
+cent-param-tb: 0.0035495758056640625
+cpu cpu cuda:1
+!!! Warning: find inf in fp16 optimizer-step() !!!
+dp_optim_spend_time: 0.580822229385376
+                                                    Rank 5 node optimizer step takes 7.14s
+                                                    Rank 5 node torch_synchronize_time step takes 0.00s
+                                                    Rank 5 node barrier_time step takes 7.85s
+                                                    Rank 5 node optimizer step ALL(1+2+3) takes 14.99s
+                                                    Rank 5 node whole iteration takes 46.86s
+-------------------------------------------
+Rank 5 node forward pass 0/2 takes 5.38s
+Rank 5 node backward pass 0/2 takes 10.19s
+Rank 5 node forward pass 1/2 takes 5.76s
+Rank 5 node backward pass 1/2 takes 14.63s
+cent-param-tb: 0.0037221908569335938
+cpu cpu cuda:1
+!!! Warning: find inf in fp16 optimizer-step() !!!
+dp_optim_spend_time: 0.5782756805419922
+                                                    Rank 5 node optimizer step takes 6.57s
+                                                    Rank 5 node torch_synchronize_time step takes 0.00s
+                                                    Rank 5 node barrier_time step takes 11.95s
+                                                    Rank 5 node optimizer step ALL(1+2+3) takes 18.52s
+                                                    Rank 5 node whole iteration takes 54.48s
+-------------------------------------------
+Rank 5 node forward pass 0/2 takes 6.50s
+Rank 5 node backward pass 0/2 takes 12.55s
+Rank 5 node forward pass 1/2 takes 7.87s
+Rank 5 node backward pass 1/2 takes 7.32s
+cent-param-tb: 0.003042459487915039
+cpu cpu cuda:1
+!!! Warning: find inf in fp16 optimizer-step() !!!
+dp_optim_spend_time: 0.5851695537567139
+                                                    Rank 5 node optimizer step takes 6.58s
+                                                    Rank 5 node torch_synchronize_time step takes 0.00s
+                                                    Rank 5 node barrier_time step takes 8.52s
+                                                    Rank 5 node optimizer step ALL(1+2+3) takes 15.10s
+                                                    Rank 5 node whole iteration takes 49.35s
+-------------------------------------------
+----------------------------------------------------------------------------------------time_spend： 287.7685430049896 secend

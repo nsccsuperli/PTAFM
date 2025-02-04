@@ -1,0 +1,13 @@
+    [35;40;7m[Python: Rank-id:1 cuda-id:1][0m init_communicators start
+48 == 2 * 6
+T4 Node1. MappingID:37
+                                                                 rankid:1,mapping id:37,group :[38, 40, 37, 27, 57, 55, 58, 53, 48, 47, 0, 51, 50, 43],group size:14
+_PIPELINE_PARALLEL_RANK: 2
+Initialize NCCLCommunicator: < pipeline_group_2 >; rank: 2
+Gather_id:2,mapping id:37,group :[38, 40, 37, 27],Gather group size:4
+Initialize NCCLCommunicator: < pipeline_gather_group_5 >; rank: 2
+Data Parallel id:8,mapping id:37,group :[66, 71, 69, 70, 67, 68, 38, 40, 37, 36, 39, 41],DATA group size:12
+Initialize NCCLCommunicator: < data_group_5 >; rank: 8
+    [35;40;7m[Python: Rank-id:1 cuda-id:1][0m init_communicators finished
+> building BertWordPieceLowerCase tokenizer ...
+ > padded vocab (size: 28998) with 58 dummy tokens (new size: 29056)

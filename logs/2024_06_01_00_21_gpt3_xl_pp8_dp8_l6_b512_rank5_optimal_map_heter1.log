@@ -1,0 +1,26 @@
+    [35;40;7m[Python: Rank-id:5 cuda-id:1][0m init_communicators start
+48 == 2 * 6
+A100 Node5. MappingID:15
+                                                                 rankid:5,mapping id:15,group :[70, 67, 68, 24, 30, 15, 64, 61, 60, 12],group size:10
+_PIPELINE_PARALLEL_RANK: 5
+Initialize NCCLCommunicator: < pipeline_group_1 >; rank: 5
+Scatther_id:5,mapping id:15,group :[15, 64, 61, 60],Scatter group size:4
+Initialize NCCLCommunicator: < pipeline_scatter_group_1 >; rank: 0
+Data Parallel id:2,mapping id:15,group :[6, 53, 15, 48, 47, 49, 42, 45],DATA group size:8
+Initialize NCCLCommunicator: < data_group_2 >; rank: 2
+    [35;40;7m[Python: Rank-id:5 cuda-id:1][0m init_communicators finished
+Running  gpipe  with data parallel.(args.profiling=tidy_profiling)
+args, vocab_size:-1, num_classes:2, device:cuda:1, use_dp:True
+=======Initialize Gpipe.
+=======Gpipe use FP16
+global_rank: 5, pipeline_group_size: 10, pp_rank: 5, pre_node_rank: 4, post_node_rank: 6, comm_size: 10, comm: <comm.nccl_backend.NCCLCommunicator object at 0x7fbee4af62b0>, gather_comm: None, scatter_comm: <comm.nccl_backend.NCCLCommunicator object at 0x7fbee4af6220>, device_gpu: 1
+=======Gradient accumulate step:  2
+=======Current micro-batch send/recv size: 8 MB (fp16)
+=======Number of micro-batches: 32.
+self.globalID: 5.  completed Middle model load
+fp16 uses ConstantGradScaler.
+Data parallel implementation:  central_ps
+Total number of parameters: 302149632, element size: 2, total size 576 MB.
+Flattened parameter number: 302149632, element size: 2.
+Flattened parameter grad number: 302149632, element size: 2.
+tidy_profiling
