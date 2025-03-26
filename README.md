@@ -4,7 +4,7 @@
 Large language models have experienced rapid growth, constrained by the computational limits of training foundation models. With the continuous release of new GPU products, high-end devices are increasingly accessible, eventually transitioning into the mid-range and low-end segments. A pivotal focus in current research is the facilitation of joint training across diverse regions and devices. However, this research encounters dual-heterogeneous challenges in both network and device capabilities. 
 
 ## 💡Overview 
-![world_map](./images/fig2.png)
+<div align="center"> ![world_map](./images/fig2.png)</div>
 - We introduce a novel polygonal training architecture for foundation model, designed to support large-scale training paradigms. Our approach incorporates critical factors such as model size, network conditions, and device performance from both global and local perspectives.
 
 - We develop the lightweight polygon initialization algorithm, which considers data centers as the fundamental units from a global perspective. This algorithm assesses computing power, latency, and bandwidth between units to establish an initial training strategy that incorporates both pipeline and data parallelism. 
