@@ -1,4 +1,4 @@
-# Polygon Training Architecture for Foundation Model on Dual-Heterogeneous with Network and Device
+# Polygon training architecture for foundation models with network- and device-level heterogeneity
 
 ![world_map](./images/world_map.png)
 Large language models have experienced rapid growth, constrained by the computational limits of training foundation models. With the continuous release of new GPU products, high-end devices are increasingly accessible, eventually transitioning into the mid-range and low-end segments. A pivotal focus in current research is the facilitation of joint training across diverse regions and devices. However, this research encounters dual-heterogeneous challenges in both network and device capabilities. 
@@ -94,6 +94,20 @@ Based on the algorithm-generated group mappings from the prior step, configure t
     bash scripts\aws_run_gpt3_optimal_Ngpu_training.sh 1
     ```
 - Training logs and execution records will be shown in [trace_json](trace_json).
+
+## Publications
+If you find PTAFM useful for your research or development, please cite the following :
+```
+@article{LI2025103264,
+title = {Polygon training architecture for foundation models with network- and device-level heterogeneity},
+journal = {Information Fusion},
+pages = {103264},
+year = {2025},
+issn = {1566-2535},
+doi = {https://doi.org/10.1016/j.inffus.2025.103264},
+author = {Chuantao Li and Fulai Liu and Xiaoming Wu and Jidong Huo and Chunxiao Wang and Antian Liang and Zhigang Zhao and Longxiang Gao},
+}
+```
 
 ## 🧡 Acknowledgements
 
